@@ -1,52 +1,33 @@
-# @zal/react-hooks
+# @zal-kit/next
 
-A collection of useful React hooks for modern web applications.
+A collection of useful React hooks for Next.js applications.
+
+## Requirements
+
+This package requires the following peer dependencies:
+
+- `next` >= 13.0.0
+- `react` >= 16.8.0
+- `react-dom` >= 16.8.0
 
 ## Installation
 
 ```bash
-npm install @zal/react-hooks
+npm install @zal-kit/next
 # or
-yarn add @zal/react-hooks
+yarn add @zal-kit/next
 # or
-pnpm add @zal/react-hooks
+pnpm add @zal-kit/next
 ```
 
 ## Hooks
 
-### `useToggle`
-
-A simple hook for managing boolean state with a toggle function.
-
-```typescript
-import { useToggle } from '@zal/react-hooks';
-
-function MyComponent() {
-  const [isOpen, toggle, setIsOpen] = useToggle(false);
-  
-  return (
-    <div>
-      <button onClick={toggle}>Toggle</button>
-      <button onClick={() => setIsOpen(true)}>Open</button>
-      {isOpen && <div>Content</div>}
-    </div>
-  );
-}
-```
-
-**API:**
-- `initialValue` (boolean, optional): Initial state value (default: `false`)
-- Returns: `[state, toggle, setState]`
-  - `state`: Current boolean value
-  - `toggle`: Function to toggle the state
-  - `setState`: Function to set state directly
-
 ### `useRouteFilter`
 
-A hook for managing URL query parameters and navigation without a router dependency.
+A hook for managing URL query parameters and navigation in Next.js applications.
 
 ```typescript
-import { useRouteFilter } from '@zal/react-hooks';
+import { useRouteFilter } from '@zal-kit/next';
 
 function ProductList() {
   const { params, pushWithParam } = useRouteFilter();
@@ -90,19 +71,4 @@ This package is written in TypeScript and includes type definitions.
 ## License
 
 MIT
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Publishing
-
-To publish a new version:
-
-```bash
-# Update version
-npm version patch  # or minor, major
-
-# Publish to npm
-npm publish
 ```

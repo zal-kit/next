@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+tsconfig.tsbuildinfo
+
+# Environments
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+*.log*
+
+# macOS files
+.DS_Store
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Coverage reports
+coverage/
+
+# Optional cache folders
+.cache/
+.eslintcache
+.turbo/
+
+# Local npm tokens
+.npmrc
+
+#lock files
+package-lock.json

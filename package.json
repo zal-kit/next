@@ -1,0 +1,64 @@
+{
+  "name": "@zal-kit/next",
+  "version": "1.0.0",
+  "description": "A collection of useful React hooks for Next.js applications",
+  "author": "zidanez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zal-kit/next.git"
+  },
+  "homepage": "https://github.com/zal-kit/next#readme",
+  "bugs": {
+    "url": "https://github.com/zal-kit/next/issues"
+  },
+  "keywords": [
+    "nextjs",
+    "next",
+    "next.js",
+    "react",
+    "hooks",
+    "react-hooks",
+    "useToggle",
+    "useRouteFilter",
+    "typescript"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "echo \"No tests yet\"",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "next": ">=13.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
